@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-color:aquamarine;
+    background-image: linear-gradient(90deg, pink, yellow);
         }
         div {
       padding: 10px;
