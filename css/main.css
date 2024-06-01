@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+    background-color:aquamarine;
+        }
+        div {
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+    th,
+    td {
+        border: 2px solid black;
+        padding: 0 60px 0 60px;
+    }
+    table.center {
+      margin-left: auto;
+      margin-right: auto;
+  }
+  #col{
+    margin-left: auto;
+    margin-right: auto;
+  }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!--<script> console.log("hellloooo")</script>-->
+  <!--  <script src="js/main.js" ></script> -->
+
+</head>
+<body>
+    <script>
+      var r
+        function fill() 
+        { 
+        var tb=document.getElementById("tb")
+        var i
+        var r= tb.insertRow(1);
+      for (i=0; i<=3; i=i+1)
+       {
+          var name= document.getElementById(`student${i}`)
+          var t = r.insertCell(i)
+        t.innerHTML=name.value 
+       }  
+      
+      var selector = document.querySelector('input[name="gender"]:checked')
+      var w = r.insertCell(4)
+      w.innerHTML=selector.value
+
+      var t = r.insertCell(5)
+      t.innerHTML="<button onclick = \"del(this)\" > Delete </button>"
+      }
+function del(w){
+  var i = w.parentNode.parentNode.rowIndex;
+  document.getElementById("tb").deleteRow(i);
+} 
+      </script>
+      <div id="col">
+    <h1> Fill the survey</h1>
+    <div>
+    <label> Name:</label><input id="student0"></div>
+    <div>
+
+    <label> Age:</label><input id="student1"></div>
+<div>
+    <label> Course:</label><input id="student2"><br></div><div>
+    <label> Email ID:</label><input id="student3">  <br> </div><div>
+      <label> Gender:</label> 
+    <input type="radio" name="gender" value="Male"  id="student"/> Male 
+    <input type="radio" name="gender" value="Female" id="student"/> Female <br/></div>
+    <button onclick="fill()">Click to add</button>
+    <div>
+    <table class="center" id="tb">  
+        <tr><th>Name</th><th>Age</th><th>Course</th><th>Email</th><th>Gender</th><th>Action</th></tr>  
+        <tr id="tr"></tr>  <br>
+    </table>       
+    </div>
+    </div>
+</body>
+</html>
